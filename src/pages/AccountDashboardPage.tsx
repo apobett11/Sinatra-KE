@@ -242,7 +242,7 @@ export const AccountDashboardPage: React.FC = () => {
               }`}
             >
               <ShoppingBag className="w-3.5 h-3.5 text-[#c85028] shrink-0" />
-              <span>Browse Collection</span>
+              <span>Collections</span>
             </Link>
           </div>
         </div>

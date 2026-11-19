@@ -118,7 +118,7 @@ export const DashboardGreetingSection: React.FC<DashboardGreetingSectionProps> =
                   <span>Check Orders</span>
                 </button>
 
-                {/* Button 2: Browse Collection */}
+                {/* Button 2: Collections */}
                 <button
                   type="button"
                   onClick={() => navigate('/shop')}
@@ -129,7 +129,7 @@ export const DashboardGreetingSection: React.FC<DashboardGreetingSectionProps> =
                   }`}
                 >
                   <ShoppingBag className="w-3.5 h-3.5 text-[#c85028] shrink-0" />
-                  <span>Browse Collection</span>
+                  <span>Collections</span>
                 </button>
               </div>
             </div>
