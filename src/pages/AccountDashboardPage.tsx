@@ -199,28 +199,30 @@ export const AccountDashboardPage: React.FC = () => {
         >
           <div className="flex items-center gap-4">
             <div
-              className={`grid grid-cols-2 gap-3 p-3 rounded-2xl border ${
+              className={`grid grid-cols-2 gap-3 p-3 sm:px-4 sm:py-3 rounded-2xl border min-w-[250px] sm:min-w-[270px] ${
                 isDark ? 'bg-[#09121d] border-[#1a283c]' : 'bg-[#faf6f0] border-[#ede4d8]'
               }`}
             >
-              <div className="min-w-0 px-2 sm:px-3 py-1 border-r border-gray-200 dark:border-gray-800 flex flex-col justify-center">
-                <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-wider text-gray-400 block truncate">
+              <div className="px-2 sm:px-3 py-1 border-r border-gray-200 dark:border-gray-800 flex flex-col justify-center">
+                <span className="text-[10px] lg:text-[9px] uppercase font-black tracking-wider text-gray-400 block">
                   Orders Total
                 </span>
-                <div className="flex items-center gap-1.5 mt-0.5 min-w-0">
-                  <Package className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#c85028] shrink-0" />
-                  <span className="text-sm sm:text-lg font-black truncate">{ordersTotal}</span>
+                <div className="flex items-center gap-1.5 mt-0.5">
+                  <Package className="w-4 h-4 text-[#c85028] shrink-0" />
+                  <span className="text-base sm:text-lg lg:text-sm font-black text-gray-900 dark:text-white">
+                    {ordersTotal}
+                  </span>
                 </div>
               </div>
-              <div className="min-w-0 px-2 sm:px-3 py-1 flex flex-col justify-center">
-                <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-wider text-gray-400 block truncate">
+              <div className="px-2 sm:px-3 py-1 flex flex-col justify-center">
+                <span className="text-[10px] lg:text-[9px] uppercase font-black tracking-wider text-gray-400 block">
                   Total Amount
                 </span>
-                <div className="flex items-baseline gap-1 mt-0.5 min-w-0">
-                  <span className="text-[10px] sm:text-xs font-black text-emerald-500 shrink-0">
+                <div className="flex items-baseline gap-1 mt-0.5">
+                  <span className="text-xs lg:text-[11px] font-black text-emerald-500 shrink-0">
                     KSh
                   </span>
-                  <span className="text-xs xs:text-sm sm:text-base font-black text-emerald-500 truncate">
+                  <span className="text-base sm:text-lg lg:text-sm font-black text-emerald-500 whitespace-nowrap">
                     {totalOrderAmount.toLocaleString()}
                   </span>
                 </div>
