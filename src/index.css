@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --dark-page-bg: #0b141f;
+    --dark-header-bg: #09121d;
+    --dark-announcement-bg: #0a131e;
+    --dark-section-bg: #0e1825;
+    --dark-surface-elevated: #101b28;
+    --dark-border: #19273a;
+    --dark-primary-text: #ffffff;
+    --dark-secondary-text: #94a3b8;
+    --dark-muted-text: #64748b;
+
+    --light-page-bg: #faf4ee;
+    --light-header-bg: #eae0d0;
+    --light-announcement-bg: #f1dcc8;
+    --light-section-bg: #f5efe8;
+    --light-surface-elevated: #ffffff;
+    --light-border: #ede4d8;
+    --light-primary-text: #0f172a;
+    --light-secondary-text: #475569;
+    --light-muted-text: #94a3b8;
+
+    --sinatra-terracotta: #c85428;
+    --sinatra-terracotta-dark: #b3441e;
+    --sinatra-gold: #f59e0b;
+    --sinatra-blue: #0d72ea;
+    --sinatra-red: #dc2626;
+
+    /* Active theme variables (defaults to dark) */
+    --bg-page: var(--dark-page-bg);
+    --bg-header: var(--dark-header-bg);
+    --bg-surface: var(--dark-surface-elevated);
+    --border-color: var(--dark-border);
+    --text-primary: var(--dark-primary-text);
+    --text-secondary: var(--dark-secondary-text);
+    --text-muted: var(--dark-muted-text);
+    --accent-orange: var(--sinatra-terracotta);
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  .theme-light {
+    --bg-page: var(--light-page-bg);
+    --bg-header: var(--light-header-bg);
+    --bg-surface: var(--light-surface-elevated);
+    --border-color: var(--light-border);
+    --text-primary: var(--light-primary-text);
+    --text-secondary: var(--light-secondary-text);
+    --text-muted: var(--light-muted-text);
+    --accent-orange: var(--sinatra-terracotta);
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom smooth transitions */
+.transition-theme {
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide scrollbar for horizontal categories */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Capsule search expansion */
+.capsule-search-enter {
+  width: 0;
+  opacity: 0;
+}
+.capsule-search-active {
+  width: 240px;
+  opacity: 1;
+  transition: width 280ms cubic-bezier(0.4, 0, 0.2, 1), opacity 200ms ease;
+}
+
+/* Spring motion micro-interactions */
+.touch-spring {
+  transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.touch-spring:active {
+  transform: scale(0.96);
+}
