@@ -203,22 +203,25 @@ export const AccountDashboardPage: React.FC = () => {
                 isDark ? 'bg-[#09121d] border-[#1a283c]' : 'bg-[#faf6f0] border-[#ede4d8]'
               }`}
             >
-              <div className="px-3 py-1 border-r border-gray-200 dark:border-gray-800">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">
+              <div className="min-w-0 px-2 sm:px-3 py-1 border-r border-gray-200 dark:border-gray-800 flex flex-col justify-center">
+                <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-wider text-gray-400 block truncate">
                   Orders Total
                 </span>
-                <div className="flex items-center gap-1.5 mt-0.5">
-                  <Package className="w-4 h-4 text-[#c85028]" />
-                  <span className="text-base sm:text-lg font-black">{ordersTotal}</span>
+                <div className="flex items-center gap-1.5 mt-0.5 min-w-0">
+                  <Package className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#c85028] shrink-0" />
+                  <span className="text-sm sm:text-lg font-black truncate">{ordersTotal}</span>
                 </div>
               </div>
-              <div className="px-3 py-1">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">
-                  Total Order Amount
+              <div className="min-w-0 px-2 sm:px-3 py-1 flex flex-col justify-center">
+                <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-wider text-gray-400 block truncate">
+                  Total Amount
                 </span>
-                <div className="flex items-center gap-1.5 mt-0.5">
-                  <span className="text-base sm:text-lg font-black text-emerald-500">
-                    KSh {totalOrderAmount.toLocaleString()}
+                <div className="flex items-baseline gap-1 mt-0.5 min-w-0">
+                  <span className="text-[10px] sm:text-xs font-black text-emerald-500 shrink-0">
+                    KSh
+                  </span>
+                  <span className="text-xs xs:text-sm sm:text-base font-black text-emerald-500 truncate">
+                    {totalOrderAmount.toLocaleString()}
                   </span>
                 </div>
               </div>
