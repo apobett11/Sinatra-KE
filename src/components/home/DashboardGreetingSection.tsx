@@ -21,7 +21,7 @@ export const DashboardGreetingSection: React.FC<DashboardGreetingSectionProps> =
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Premium Personal Card */}
         <div
-          className={`relative overflow-hidden rounded-3xl border-2 border-t-4 border-t-[#c85028] p-5 sm:p-7 transition-all ${
+          className={`relative overflow-hidden rounded-3xl border-2 border-t-4 border-t-[#c85028] p-4.5 sm:p-7 transition-all ${
             isDark
               ? 'bg-gradient-to-br from-[#0c1422] via-[#0f1929] to-[#09101a] border-[#1e2e44] shadow-[0_20px_50px_rgba(0,0,0,0.55)]'
               : 'bg-gradient-to-br from-[#ffffff] via-[#fdfbf8] to-[#f6efe6] border-[#e5d6c5] shadow-[0_16px_40px_rgba(200,80,40,0.1)]'
@@ -46,7 +46,7 @@ export const DashboardGreetingSection: React.FC<DashboardGreetingSectionProps> =
               {/* Personal Details */}
               <div className="min-w-0">
                 <div className="flex items-center gap-2 flex-wrap mb-0.5">
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-black uppercase tracking-widest bg-[#c85028]/15 text-[#c85028] border border-[#c85028]/25">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-[9px] sm:text-[10px] font-black uppercase tracking-wider bg-[#c85028]/15 text-[#c85028] border border-[#c85028]/25">
                     <Sparkles className="w-2.5 h-2.5 text-[#c85028]" />
                     <span>Sinatra Member</span>
                   </span>
@@ -84,52 +84,52 @@ export const DashboardGreetingSection: React.FC<DashboardGreetingSectionProps> =
               >
                 {/* Stat 1: Orders Total */}
                 <div className="px-2.5 sm:px-3 py-1 border-r border-gray-200 dark:border-gray-800">
-                  <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-widest text-gray-400 block">
+                  <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-wider text-gray-400 block">
                     Orders Total
                   </span>
                   <div className="flex items-center gap-1.5 mt-0.5">
-                    <Package className="w-4 h-4 text-[#c85028]" />
+                    <Package className="w-4 h-4 text-[#c85028] shrink-0" />
                     <span className="text-base sm:text-lg font-black">{ordersTotal}</span>
                   </div>
                 </div>
 
                 {/* Stat 2: Total Order Amount */}
                 <div className="px-2.5 sm:px-3 py-1">
-                  <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-widest text-gray-400 block">
+                  <span className="text-[9px] sm:text-[10px] uppercase font-black tracking-wider text-gray-400 block">
                     Total Amount
                   </span>
                   <div className="flex items-center gap-1.5 mt-0.5">
-                    <span className="text-base sm:text-lg font-black text-emerald-500">
+                    <span className="text-base sm:text-lg font-black text-emerald-500 whitespace-nowrap">
                       KSh {totalOrderAmount.toLocaleString()}
                     </span>
                   </div>
                 </div>
               </div>
 
-              {/* 2 Buttons: Perfectly Optimized for Mobile View */}
-              <div className="grid grid-cols-2 sm:flex sm:flex-row lg:flex-col gap-2 w-full lg:w-auto shrink-0">
+              {/* 2 Buttons: Perfectly fitted with zero text clipping */}
+              <div className="flex flex-col sm:flex-row lg:flex-col gap-2 w-full lg:w-auto shrink-0">
                 {/* Button 1: Check Orders */}
                 <button
                   type="button"
                   onClick={() => navigate('/account/orders')}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3.5 py-3 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#d9532f] to-[#b3441e] hover:brightness-110 text-white font-black uppercase tracking-wider text-[11px] sm:text-xs shadow-[0_4px_16px_rgba(200,80,40,0.35)] active:scale-98 transition-all cursor-pointer whitespace-nowrap"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#d9532f] to-[#b3441e] hover:brightness-110 text-white font-black uppercase tracking-wider text-xs shadow-md transition-all active:scale-98 cursor-pointer whitespace-nowrap min-h-[44px]"
                 >
-                  <Package className="w-3.5 h-3.5 shrink-0" />
+                  <Package className="w-4 h-4 shrink-0" />
                   <span>Check Orders</span>
-                  <ArrowRight className="w-3.5 h-3.5 shrink-0 hidden xs:inline" />
+                  <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                 </button>
 
                 {/* Button 2: Browse Collection */}
                 <button
                   type="button"
                   onClick={() => navigate('/shop')}
-                  className={`w-full sm:w-auto inline-flex items-center justify-center gap-1.5 sm:gap-2 px-3.5 py-3 sm:py-2.5 rounded-xl font-black uppercase tracking-wider text-[11px] sm:text-xs border-2 active:scale-98 transition-all cursor-pointer whitespace-nowrap ${
+                  className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 sm:py-2.5 rounded-xl font-black uppercase tracking-wider text-xs border-2 transition-all active:scale-98 cursor-pointer whitespace-nowrap min-h-[44px] ${
                     isDark
                       ? 'border-[#22354c] bg-[#142030] text-white hover:bg-[#1a283c] hover:border-[#c85028]'
                       : 'border-[#d8c8b4] bg-white text-gray-900 hover:bg-[#faf4ed] hover:border-[#c85028] shadow-xs'
                   }`}
                 >
-                  <ShoppingBag className="w-3.5 h-3.5 text-[#c85028] shrink-0" />
+                  <ShoppingBag className="w-4 h-4 text-[#c85028] shrink-0" />
                   <span>Browse Collection</span>
                 </button>
               </div>

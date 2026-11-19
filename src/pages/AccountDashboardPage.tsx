@@ -225,23 +225,23 @@ export const AccountDashboardPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
             <Link
               to="/account/orders"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-3 sm:py-2.5 rounded-xl bg-gradient-to-r from-[#d9532f] to-[#b3441e] hover:brightness-110 text-white font-black uppercase tracking-wider text-[11px] sm:text-xs shadow-md transition-all active:scale-98 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-[#d9532f] to-[#b3441e] hover:brightness-110 text-white font-black uppercase tracking-wider text-xs shadow-md transition-all active:scale-98 cursor-pointer whitespace-nowrap min-h-[44px]"
             >
-              <Package className="w-3.5 h-3.5" />
+              <Package className="w-4 h-4 shrink-0" />
               <span>Check Orders</span>
             </Link>
             <Link
               to="/shop"
-              className={`w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-3.5 py-3 sm:py-2.5 rounded-xl font-black uppercase tracking-wider text-[11px] sm:text-xs border-2 transition-all active:scale-98 cursor-pointer ${
+              className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-black uppercase tracking-wider text-xs border-2 transition-all active:scale-98 cursor-pointer whitespace-nowrap min-h-[44px] ${
                 isDark
                   ? 'border-[#22354c] bg-[#142030] text-white hover:bg-[#1a283c] hover:border-[#c85028]'
                   : 'border-[#d8c8b4] bg-white text-gray-900 hover:bg-[#faf4ed] hover:border-[#c85028]'
               }`}
             >
-              <ShoppingBag className="w-3.5 h-3.5 text-[#c85028]" />
+              <ShoppingBag className="w-4 h-4 text-[#c85028] shrink-0" />
               <span>Browse Collection</span>
             </Link>
           </div>
